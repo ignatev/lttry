@@ -26,10 +26,8 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator',
             'org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-data-jpa',
-            'org.springframework.boot:spring-boot-starter-mustache',
-            'org.springframework.boot:spring-cloud-starter-security'/*,
-            'com.fasterxml.jackson.core:jackson-databind:2.9.4'
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.4'*/
+            'org.springframework.boot:spring-boot-starter-mustache'//,
+            //'org.springframework.boot:spring-boot-starter-security'
 
     runtime 'org.springframework.boot:spring-boot-devtools',
             'com.h2database:h2'
