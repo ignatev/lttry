@@ -1,8 +1,8 @@
 #!/bin/bash
 
 eval "$(ssh-agent -s)"
-chmod 600 /tmp/id_rsa
-ssh-add /tmp/id_rsa
+chmod 600 ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa
 
 
 ssh root@$DO_SERVER <<EOF

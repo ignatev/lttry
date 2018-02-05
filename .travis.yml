@@ -14,5 +14,5 @@ deploy:
     branch: master
 before_install:
 - openssl aes-256-cbc -K $encrypted_ec8b3062fb79_key -iv $encrypted_ec8b3062fb79_iv
-  -in .travis/id_rsa.enc -out ~\/tmp/id_rsa -d
+  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
 
