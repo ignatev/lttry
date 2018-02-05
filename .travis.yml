@@ -8,7 +8,7 @@ install:
 - gradle build
 script:
 - gradle build docker
-- docker push ignatev/lottery
+- docker push ignatev/lttry-0.1
 deploy:
   provider: script
   script: ".travis/deploy.sh"
