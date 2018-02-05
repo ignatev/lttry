@@ -5,7 +5,6 @@ services:
 addons:
   ssh_known_hosts: $DO_SERVER
 script:
-- docker login
 - gradle build
 - cp Dockerfile build/libs/
 - cd build/lib && docker build -t ignatev/lttry .
