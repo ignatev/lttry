@@ -8,7 +8,7 @@ script:
 - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 - gradle build
 - cp Dockerfile build/libs/
-- cd build/lib && docker build -t ignatev/lttry .
+- cd build/libs && docker build -t ignatev/lttry .
 - docker push ignatev/lttry
 deploy:
   provider: script
