@@ -1,0 +1,18 @@
+language: java
+sudo: required
+services:
+- docker
+addons:
+  ssh_known_hosts: $DO_SERVER
+script:
+- gradle build docker
+- docker push ignatev/lottery
+deploy:
+  provider: script
+  script: ".travis/deploy.sh"
+  on:
+    branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_ec8b3062fb79_key -iv $encrypted_ec8b3062fb79_iv
+  -in .travis/id_rsa.enc -out ~\/tmp/id_rsa -d
+
