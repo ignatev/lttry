@@ -6,7 +6,9 @@ addons:
   ssh_known_hosts: $DO_SERVER
 script:
 - docker login
-- gradle build docker
+- gradle build
+- cp Dockerfile build/lib/
+- cd build/lib && docker build -t ignatev/lttry .
 - docker push ignatev/lttry
 deploy:
   provider: script
