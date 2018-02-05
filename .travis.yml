@@ -4,9 +4,8 @@ services:
 - docker
 addons:
   ssh_known_hosts: $DO_SERVER
-install:
-- gradle build
 script:
+- docker login
 - gradle build docker
 - docker push ignatev/lttry
 deploy:
