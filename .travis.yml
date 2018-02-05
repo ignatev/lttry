@@ -5,7 +5,7 @@ services:
 addons:
   ssh_known_hosts: $DO_SERVER
 script:
-- docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - gradle build
 - cp Dockerfile build/libs/
 - cd build/libs && docker build -t ignatev/lttry .
