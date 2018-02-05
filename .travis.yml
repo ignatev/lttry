@@ -7,7 +7,7 @@ addons:
 script:
 - docker login
 - gradle build
-- cp Dockerfile build/lib/
+- cp Dockerfile build/libs/
 - cd build/lib && docker build -t ignatev/lttry .
 - docker push ignatev/lttry
 deploy:
