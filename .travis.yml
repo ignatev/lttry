@@ -10,6 +10,7 @@ script:
 - cp Dockerfile build/libs/
 - cd build/libs && docker build -t ignatev/lttry .
 - docker push ignatev/lttry
+- chmod +x .travis/deploy.sh
 deploy:
   provider: script
   script: ".travis/deploy.sh"
