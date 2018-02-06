@@ -12,3 +12,4 @@ ssh root@$DO_SERVER <<EOF
   docker pull ignatev/lottery
   docker run -d -p 8080:8080 --name lttry ignatev/lottery
 EOF
+

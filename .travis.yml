@@ -5,6 +5,7 @@ services:
 addons:
   ssh_known_hosts: $DO_SERVER
 script:
+- tree .
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - gradle build
 - cp Dockerfile build/libs/
