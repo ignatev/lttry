@@ -13,6 +13,7 @@ script:
 - docker push ignatev/lttry
 - cd ../..
 - chmod +x .travis/deploy.sh
+- ssh-keyscan $DO_SERVER >> ~/.ssh/known_hosts
 - sh .travis/deploy.sh
 #deploy:
 #  provider: script
